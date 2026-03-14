@@ -1,0 +1,27 @@
+[project]
+name = "pex"
+version = "0.0.1"
+authors = ["PEX Development Team"]
+description = "A decentralized synthetic primitive for the Peruvian Sol on Stacks"
+license = "MIT"
+
+[contracts.pex-token]
+path = "contracts/pex-token.clar"
+
+[contracts.pex-oracle]
+path = "contracts/pex-oracle.clar"
+
+[contracts.pex-burn-to-mint]
+path = "contracts/pex-burn-to-mint.clar"
+
+[repl]
+costs_version = 2
+
+[[deployment]]
+id = "testnet"
+network = "testnet"
+order = [
+    "pex-oracle",
+    "pex-token",
+    "pex-burn-to-mint"
+]

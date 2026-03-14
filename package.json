@@ -1,0 +1,26 @@
+{
+  "name": "pex-protocol",
+  "version": "0.0.1",
+  "description": "A decentralized synthetic primitive for the Peruvian Sol on Stacks",
+  "license": "MIT",
+  "scripts": {
+    "check": "clarinet check",
+    "test": "clarinet test",
+    "test:verbose": "clarinet test --verbose",
+    "console": "clarinet console",
+    "integrate": "clarinet integrate",
+    "deploy:testnet": "clarinet deploy --network testnet",
+    "deploy:mainnet": "clarinet deploy --network mainnet",
+    "oracle:submit": "node scripts/submit-price.js",
+    "oracle:health": "node scripts/check-oracle-health.js",
+    "bridge:deposit": "node scripts/deposit-collateral.js"
+  },
+  "devDependencies": {
+    "@hirosystems/clarinet": "^1.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.0.0"
+  }
+}
